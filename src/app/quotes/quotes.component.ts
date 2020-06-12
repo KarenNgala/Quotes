@@ -9,7 +9,7 @@ import { Quotes } from './quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[]=[
-    new Quotes(1, 'Character is revealed through choice', 'Anonymous', 'Catherine', new Date(2020,6,12))
+    new Quotes(1, 'Character is revealed through choice', 'Anonymous', 'Catherine', new Date(2020,5,12))
   ];
 
   details(index){
