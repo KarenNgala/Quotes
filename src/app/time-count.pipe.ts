@@ -19,9 +19,7 @@ export class TimeCountPipe implements PipeTransform {
     var years = `${yearsCount} years ago`;
 
     if(value <= todayWithoutTime){
-      if(value = todayWithoutTime){
-        return `today`;
-      }else if (daysCount < 30){
+      if (daysCount < 30){
         return days;
       }else if (daysCount >= 30){
         if (monthsCount <= 12){
