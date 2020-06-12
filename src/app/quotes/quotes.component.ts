@@ -12,6 +12,10 @@ export class QuotesComponent implements OnInit {
     new Quotes(1, 'Character is revealed through choice', 'Anonymous', 'Catherine', new Date(2020,6,12))
   ];
 
+  details(index){
+    this.quotes[index].showDetail = !this.quotes[index].showDetail;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
