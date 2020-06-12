@@ -1,1 +1,3 @@
-<p>quotes works!</p>
+<div *ngFor='let quote of quotes; let i = index'>
+    <p>{{quote.text}} ~ {{quote.author}}</p>
+</div>
