@@ -1,1 +1,27 @@
-<p>upload-form works!</p>
+<div class="container-fluid">
+    <h3>Submit a new quote</h3>
+
+    <form (ngSubmit)='submitQuote()' #addForm='ngForm'>
+        <div class="form-group">
+            <label>Quote</label>
+            <input type="text" class="form-control" [(ngModel)]="newQuote.text" name="text" #text='ngModel' id="text">
+        </div>
+
+        <div class="form-group">
+            <label>Author</label>
+            <input type="text" class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' id="author">
+        </div>
+
+        <div class="form-group">
+            <label>Submitted by</label>
+            <input type="text" id="submitName" class="form-control" [(ngModel)]="newQuote.submitName" name="submitName" #submitName='ngModel'>
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="postDate" class="form-control" [(ngModel)]="newQuote.postDate" name="postDate" #postDate='ngModel'>
+        </div>
+
+        <button class="btn btn-dark" type="submit">Add Quote</button>
+    </form>
+</div>
