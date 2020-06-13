@@ -1,7 +1,7 @@
 <div *ngFor='let quote of quotes; let i = index'>
     <div>
         <p>{{quote.text}} ~ {{quote.author}} posted {{quote.postDate|timeCount}}</p>
-        <button (click)='details(i)'>Posted by</button>
+        <button (click)='details(i)'>See more</button>
     </div>
     <div *ngIf='quote.showDetail'>
         <app-quote-details [quote]='quote'></app-quote-details>
