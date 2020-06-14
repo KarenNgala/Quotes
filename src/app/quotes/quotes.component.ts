@@ -9,11 +9,9 @@ import { Quotes } from './quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[]=[
-    new Quotes(1, 'The best argument against democracy is a conversation with the average voter.', 'Winston Churchill', 'Catherine', new Date(2020,5,12)),
-    new Quotes(2, 'It is impossible to know everything we should know. All we can do is the best we can.', 'Dr.Pavesh', 'Linda', new Date(2019,12,10)),
-    new Quotes(3, 'Routine is an incredible thing. We become what we repeatedly do.', 'Anonymous', 'Joe', new Date(2019,2,10)),
-    new Quotes(4, 'Compatibility is not the prerequisite for love, it is the achievement of love.', 'Alain De Botton', 'Snow', new Date(2018,5,12)),
-    new Quotes(5, 'We can perhaps only ever fall in love without knowing quite who we have fallen in love with', 'Wise man', 'Kapanya', new Date(2018,2,2))
+    new Quotes(1, 'It is hard enough to remember my opinions, without also remembering my reasons for them!', 'Friedrich Nietzsche', 'Oliver', new Date(2019,9,10)),
+    new Quotes(2, 'One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don not throw it away.', 'Stephen Hawking', 'Linda Maina', new Date(2018,2,2)),
+    new Quotes(3, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
   ];
 
   details(index){

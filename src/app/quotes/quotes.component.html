@@ -1,9 +1,22 @@
-<div *ngFor='let quote of quotes; let i = index'>
-    <div>
-        <p>{{quote.text}} ~ {{quote.author}} posted {{quote.postDate|timeCount}}</p>
-        <button (click)='details(i)'>See more</button>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <div *ngFor='let quote of quotes; let i = index' class="card">
+                <div>
+                    <div class="text-dark card-body">
+                        <blockquote class="blockquote mb-0">"{{quote.text}}" <br>
+                            <footer class="blockquote-footer">{{quote.author}}
+                                <button (click)='details(i)' class="btn btn-dark text-warning float-right">See more</button>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <br>
+                <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-quote-details>
+            </div>
+        </div>
+        <div class="col-4">
+            <app-upload-form (addQuote)="addAQuote($event)"></app-upload-form>
+        </div>
     </div>
-    <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-quote-details>
 </div>
-
-<app-upload-form (addQuote)="addAQuote($event)"></app-upload-form>

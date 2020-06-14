@@ -1,6 +1,7 @@
-<div>
-    <button (click)="upVote()">upVote <span>{{numberOfLikes}}</span></button>
-    <button (click)="downVote()">downVote<span>{{numberOfHates}}</span></button>
-    <button (click)='deleteQuote(true)'>Delete</button>
+<div class="d-flex justify-content-around">
+    <button class="btn btn-success" (click)="upVote()">upVote <span>&nbsp;{{numberOfLikes}}</span></button>
+    <button class="btn btn-danger" (click)="downVote()"> <span>&nbsp;{{numberOfHates}}</span></button>
+    <button class="btn btn-warning" (click)='deleteQuote(true)'>Delete</button>
 </div>
-<span> &nbsp; {{quote.submitName}} on {{quote.postDate|date}}</span>
+<span class="text-muted"> &nbsp;&nbsp; Posted by: {{quote.submitName}} on {{quote.postDate|date}}</span><br>
+<h5 class="text-muted"> &nbsp;&nbsp;{{quote.postDate|timeCount}}</h5>
