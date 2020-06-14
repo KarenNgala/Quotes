@@ -27,9 +27,19 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote)
   }
 
+  hideQuote(seen, index){
+    if(seen) {
+      let toHide = confirm(`Are you sure you want to delete quote?`)
+      
+      if (toHide){
+        this.quotes.splice(index,1);
+      }
+    }
+  }
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
