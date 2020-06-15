@@ -18,19 +18,18 @@ export class TimeCountPipe implements PipeTransform {
     var yearsCount = Math.round(monthsCount/12);
     var years = `${yearsCount} years ago`;
 
-    if(value <= todayWithoutTime){
+    if(value <= today){
       if (daysCount < 30){
         return days;
       }else if (daysCount >= 30){
-        if (monthsCount <= 12){
+        if (daysCount <= 365){
           return months;
-        } else if(monthsCount > 12){
+        } else{
           return years;
         }
       }
     }else{
-      // Todo change this once form validation is in
-      return `on a future date`;
+      return ``;
     }
   }
 

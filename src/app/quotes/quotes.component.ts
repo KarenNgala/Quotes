@@ -21,7 +21,7 @@ export class QuotesComponent implements OnInit {
     let allQuotesLength = this.quotes.length;
     quote.id = allQuotesLength + 1;
     quote.completeDate = new Date(quote.postDate);
-    this.quotes.push(quote)
+    this.quotes.push(quote);
   }
 
   hideQuote(seen, index){
