@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html,
+body {
+    font-family: 'Muli';
+}
+
+body {
+    background-image: url("../src/assets/brick.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
