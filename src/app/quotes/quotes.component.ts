@@ -9,9 +9,8 @@ import { Quotes } from './quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[]=[
-    new Quotes(1, 'It is hard enough to remember my opinions, without also remembering my reasons for them!', 'Friedrich Nietzsche', 'Oliver', new Date(2019,9,10)),
-    new Quotes(2, 'One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don not throw it away.', 'Stephen Hawking', 'Linda Maina', new Date(2018,2,2)),
-    new Quotes(3, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
+    new Quotes(1, 'One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don not throw it away.', 'Stephen Hawking', 'Linda Maina', new Date(2018,2,2)),
+    new Quotes(2, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
   ];
 
   details(index){
