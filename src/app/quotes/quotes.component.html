@@ -2,7 +2,7 @@
     <h2 class="nav-brand text-center">ALL THE RIGHT WORDS</h2>
     <hr>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
             <div *ngFor='let quote of quotes; let i = index' class="card">
                 <div>
                     <div class="text-dark card-body">
@@ -21,7 +21,7 @@
                 <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-quote-details>
             </div>
         </div>
-        <div class="offset-1 col-5">
+        <div class="offset-1 col-md-5">
             <app-upload-form (addQuote)="addAQuote($event)"></app-upload-form>
         </div>
     </div>
